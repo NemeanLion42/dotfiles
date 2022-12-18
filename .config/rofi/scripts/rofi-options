@@ -1,0 +1,15 @@
+#!/bin/bash
+
+declare -a options=(
+"drun"
+"run"
+"window"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Action")
+
+if [ "$choice" ]; then
+    rofi -modi "$choice" -show "$choice"
+else
+    exit 1
+fi

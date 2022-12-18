@@ -1,9 +1,0 @@
-[user]
-	name = NemeanLion42
-	email = jack@tinyx.com
-[alias]
-	lol = log --graph --oneline --decorate --color --all
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main

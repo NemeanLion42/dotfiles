@@ -1,0 +1,34 @@
+vim.api.nvim_set_option("clipboard","unnamed")
+
+vim.bo.autoindent = true
+vim.bo.autoread = true
+vim.o.autowrite = true
+vim.o.backspace = "indent,eol,start"
+vim.o.confirm = true
+vim.o.encoding = "utf-8"
+vim.bo.expandtab = true
+vim.o.fsync = true
+vim.o.hlsearch = true
+vim.o.ignorecase = true
+vim.o.incsearch = true
+vim.o.laststatus = 2
+vim.o.mouse = "a"
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.o.report = 0
+vim.o.ruler = true
+vim.o.rulerformat = true
+vim.o.shiftround = true
+vim.bo.shiftwidth = 4
+vim.wo.showbreak = ">>>"
+vim.o.showtabline = 2
+vim.o.smartcase = true
+vim.bo.smartindent = true
+vim.o.smarttab = true
+-- vim.bo.statusline =
+-- vim.bo.tabline =
+vim.bo.tabstop = 4
+vim.o.title = true
+-- vim.bo.titlestring =
+vim.wo.wrap = true
+vim.o.wrapscan = true

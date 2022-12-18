@@ -1,0 +1,28 @@
+#!/bin/bash
+
+declare -A options=(
+["Suspend"]="systemctl suspend"
+["Docked"]="$HOME/.screenlayout/docked.sh && qtile cmd-obj -o cmd -f restart"
+["Mobile"]="$HOME/.screenlayout/mobile.sh && qtile cmd-obj -o cmd -f restart"
+["4k"]="$HOME/.screenlayout/4k.sh && qtile cmd-obj -o cmd -f restart"
+["Log out"]="qtile cmd-obj -o cmd -f shutdown"
+["Reboot"]="reboot"
+["Shut down"]="shutdown now"
+)
+declare -a confirm_options=(
+"Yes"
+"No"
+)
+
+choice=$(printf '%s\n' "${!options[@]}" | rofi -dmenu -i -p "Action")
+
+if [ "$choice" ]; then
+    confirm_choice=$(printf '%s\n' "${confirm_options[@]}" | rofi -dmenu -p "$choice")
+    if [ "$confirm_choice" == "Yes" ]; then
+        ${options[$choice]}
+    else
+        exit 1
+    fi
+else
+    exit 1
+fi

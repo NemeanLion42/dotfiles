@@ -1,0 +1,18 @@
+[user]
+	name = NemeanLion42
+	email = jack@tinyx.com
+[alias]
+	lol = log --graph --oneline --decorate --color --all
+	loh = log --graph --oneline --decorate --color --all -n 10
+[pull]
+	rebase = false
+[push]
+    autoSetupRemote = true
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
