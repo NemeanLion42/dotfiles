@@ -46,7 +46,7 @@ alias nvidia-settings=nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/setting
 start() { nohup "$1" & disown; }
 
 ### Dotfiles repo ###
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/"
+alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/$HOME"
 
 ### Alert for long commands (e.g. "sleep 10; alert") ###
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
