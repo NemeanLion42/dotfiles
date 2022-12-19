@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=$HOME/.config/autostart/user-autostart.sh
+Exec=sh -c "$HOME/.config/autostart/user-autostart.sh"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
